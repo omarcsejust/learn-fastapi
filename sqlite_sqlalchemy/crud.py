@@ -26,7 +26,10 @@ def get_employee_by_email(db: Session, employee_email: str):
 
 # get all employees by offset and limit
 def get_employees(db: Session, skip: int = 0, limit: int = 100):
-    return db.query(models.Employee).offset(skip).limit(limit).all()
+    return db.query(models.Employee)\
+        .offset(skip)\
+        .limit(limit)\
+        .all()
 
 
 # delete employee by id

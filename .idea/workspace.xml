@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58988f3c-f30b-463d-909e-0c1e23820a07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite_sqlalchemy/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite_sqlalchemy/crud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite_sqlalchemy/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite_sqlalchemy/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite_sqlalchemy/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite_sqlalchemy/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sql_app.db" beforeDir="false" />
-    </list>
+    <list default="true" id="58988f3c-f30b-463d-909e-0c1e23820a07" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +63,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqlite_sqlalchemy/crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
+            <state relative-caret-position="682">
               <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -219,12 +212,12 @@
       <workItem from="1604286949023" duration="12714000" />
       <workItem from="1604376845486" duration="12327000" />
       <workItem from="1604403540875" duration="7445000" />
-      <workItem from="1604461529303" duration="14072000" />
+      <workItem from="1604461529303" duration="14379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61746000" />
+    <option name="totallyTimeSpent" value="62053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -243,7 +236,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32993197" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.25510204" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22619048" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -372,7 +365,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqlite_sqlalchemy/crud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
+        <state relative-caret-position="682">
           <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
