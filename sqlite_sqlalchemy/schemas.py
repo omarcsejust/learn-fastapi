@@ -8,15 +8,15 @@ class Employee(BaseModel):
     password: str
     is_active: bool
     salary: float
+    dept_id: int
 
     class Config:
         orm_mode = True
 
 
-class EmployeeDepartment(BaseModel):
+class Department(BaseModel):
     # id: int
     dept_name: str
-    employee_id: int
 
     class Config:
         orm_mode = True

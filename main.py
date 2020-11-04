@@ -67,3 +67,21 @@ def remove_employee(employee_id: int, db: Session = Depends(get_db)):
     )
 
 
+# offset & limit are passed as Query Parameter, (we can use also Path Parameter)
+@app.get('/get-employees')
+def get_all_employees(offset: int = 0, limit: int = 20, db: Session = Depends(get_db)):
+    return crud.get_employees(db=db, skip=offset, limit=limit)
+
+
+@app.post('/add-employee-department')
+def add_employee_department(employee_department: schemas.Department, db: Session = Depends(get_db)):
+    return crud.create_department(db=db, employee_department=employee_department)
+
+
+@app.get('/get-employee-department')
+def get_emp_dept(db: Session = Depends(get_db)):
+    return crud.get_employee_with_dept(db=db)
+
+
+
+
