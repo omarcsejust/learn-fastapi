@@ -16,12 +16,16 @@ def create_employee(employee: schemas.Employee, db: Session):
 
 # get employee by id
 def get_employee(db: Session, employee_id: int):
-    return db.query(models.Employee).filter(models.Employee.id == employee_id).first()
+    return db.query(models.Employee)\
+        .filter(models.Employee.id == employee_id)\
+        .first()
 
 
 # get employee by email
 def get_employee_by_email(db: Session, employee_email: str):
-    return db.query(models.Employee).filter(models.Employee.email == employee_email).first()
+    return db.query(models.Employee)\
+        .filter(models.Employee.email == employee_email)\
+        .first()
 
 
 # get all employees by offset and limit
@@ -34,7 +38,9 @@ def get_employees(db: Session, skip: int = 0, limit: int = 100):
 
 # delete employee by id
 def delete_employee(db: Session, employee_id: int):
-    affected_rows = db.query(models.Employee).filter(models.Employee.id == employee_id).delete()
+    affected_rows = db.query(models.Employee)\
+        .filter(models.Employee.id == employee_id)\
+        .delete()
     db.commit()
     return affected_rows
 
@@ -42,7 +48,7 @@ def delete_employee(db: Session, employee_id: int):
 # CRUD for EmployeeDepartment
 
 
-# create EmployeeDepartment record
+# create Department record
 def create_department(db: Session, employee_department: schemas.Department):
     db_department = models.Department(dept_name=employee_department.dept_name)
     db.add(db_department)
@@ -51,7 +57,7 @@ def create_department(db: Session, employee_department: schemas.Department):
     return db_department
 
 
-# joining two tables(employees & employee_departments)
+# joining two tables(employees & departments)
 def get_employee_with_dept(db: Session):
     return db.query(models.Employee, models.Department).\
         join(models.Department).all()
