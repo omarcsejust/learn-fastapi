@@ -17,6 +17,10 @@ class Employee(Base):
 
     department = relationship("Department", back_populates="owner")
 
+    @property
+    def dept_name(self):
+        return self.department.dept_name
+
 
 class Department(Base):
     __tablename__ = "departments"

@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, load_only, Load
 from sqlite_sqlalchemy import models, schemas
 
 # CRUD for Employee
@@ -59,8 +59,41 @@ def create_department(db: Session, employee_department: schemas.Department):
 
 # joining two tables(employees & departments)
 def get_employee_with_dept(db: Session):
-    return db.query(models.Employee, models.Department).\
-        join(models.Department).all()
+    # return db.query(models.Employee, models.Department).\
+    #     join(models.Department).all()
+
+    rows = db.query(models.Employee, models.Department)\
+        .join(models.Employee.department)\
+        .options(
+        Load(models.Employee).load_only("name", "email"),
+        Load(models.Department).load_only("dept_name")
+        )\
+        .all()
+
+    attrs = ['name', 'id', 'email', 'dept_name']
+    # Build the mappings using dictionary comprehensions
+    # mappings = [{attr: getattr(e, attr) for attr in attrs} for e in rows]
+    mappings = []
+    for employee in rows:
+        d = {
+            'name': employee.name,
+            'id': employee.id,
+            'email': employee.email,
+            'dept_name': employee.department.dept_name
+        }
+        mappings.append(d)
+    return mappings
+
+    # rows = db.query(*models.Employee.__table__.columns + models.Department.__table__.columns)\
+    #     .select_from(models.Employee)\
+    #     .join(models.Employee.department)\
+    #     .all()
+    # return rows
+
+    # rows = db.query(models.Employee.name, models.Department.dept_name) \
+    #     .join(models.Employee.department) \
+    #     .all()
+    # return rows
     # return db.query(models.Employee.name, models.Employee.salary, models.Department.dept_name).\
     #  join(models.Department).all()
 
