@@ -10,8 +10,12 @@ class UserService:
 
     def add_user(self, user_schema=UserSchema, image: bytes = None):
         db_user_crud = UserCrud(db=self.db)
-        user = User(name=user_schema.name, image=image)
+        user = User(name=user_schema.name, image=image, age=30)
         return db_user_crud.create(user=user)
+
+    def get_all_users(self):
+        db_user_crud = UserCrud(db=self.db)
+        return db_user_crud.read_all()
 
 
 

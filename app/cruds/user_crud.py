@@ -12,6 +12,9 @@ class UserCrud:
         self.db.refresh(user)
         return user
 
+    def read_all(self):
+        return self.db.query(User).all()
+
 
 
 
